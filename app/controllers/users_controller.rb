@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     user.email = params[:email]
     user.phone = params[:phone]
     user.address = params[:address]
-    user.role = "customer"
+    user.role = "clerk"
 
     if showPasswordLengthFlash?(params[:password], user)
       flash[:error] = "Password length should be greater than 7 characters"
