@@ -10,9 +10,6 @@ Rails.application.routes.draw do
   post "/signin" => "sessions#create", as: :sessions
   delete "/signout" => "sessions#destroy"
 
-  post "/users/:id/removeAsClerk" => "users#removeAsClerk"
-  post "/users/:id/makeAsClerk" => "users#makeAsClerk"
-
   get "/reports/:id" => "reports#invoice", as: :invoice
 
   post "/orderdeliver/:id" => "orders#deliverOrder"
@@ -27,13 +24,6 @@ Rails.application.routes.draw do
   put "/order_items/:id/increment" => "order_items#increment"
   put "/order_items/:id/incrementInCart" => "order_items#incrementInCart"
 
-  get "/TermsAndConditionsDisplay" => "others#termsAndConditionsDisplay"
-  get "/TermsAndConditionsShow" => "others#termsAndConditionsShow"
-  post "/TermsAndConditionsUpdate" => "others#termsAndConditionsUpdate"
-
-  get "/SocialMediaHandlesShow" => "others#socialMediaHandlesShow"
-  post "/SocialMediaHandlesUpdate" => "others#socialMediaHandlesUpdate"
-
   get "/CafeAddressShow" => "others#cafeAddressShow"
   post "/CafeAddressUpdate" => "others#cafeAddressUpdate"
 
@@ -41,10 +31,7 @@ Rails.application.routes.draw do
   resources :menu_items
   resources :order_items
   resources :users
-  resources :applicants
   resources :categories
-  resources :questions
-  resources :answers
   resources :reports
   resources :orders
 end

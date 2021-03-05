@@ -1,6 +1,6 @@
 .signin-signup-block{
   padding: 120px 0;
-  background-image: url(/bg-image.jpg);
+  background-color: black;
   background-position: top;
 }
 
@@ -9,16 +9,6 @@
   margin: 0 auto;
 }
 
-.tab-titles{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  padding: 30px 0;
-  font-size: 24px;
-  color: #f0d293;
-  font-weight: 600;
-  align-items: center;
-}
 
 .sign-in{
   justify-self: end;
